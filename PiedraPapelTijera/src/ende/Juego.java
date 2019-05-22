@@ -9,14 +9,18 @@ public class Juego
 {
     public static void main(String args[])
     {
-        Jugador p1=new Jugador();
-        Jugador p2=new Jugador();
-        boolean fin_de_juego=false;  
-        Integer Rondasjugadas = 0;    // Número de rondas jugadas
-        Integer EXITOS_jugador1=p1.éxitos;
-        Integer EXITOS_jugador2=p2.éxitos;
+    	boolean fin_de_juego=false;  
+        Integer Rondasjugadas = 0; 
         Integer EmPaTeS = 0;
         String opcion_JUGADOR1, opcion_JUGADOR2;
+        
+    	Jugador p1=new Jugador();
+        Jugador p2=new Jugador();
+          
+        Integer EXITOS_jugador1=p1.éxitos;
+        Integer EXITOS_jugador2=p2.éxitos;
+        
+        
         
         // Bucle de juego
         do
