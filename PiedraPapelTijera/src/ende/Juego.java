@@ -34,7 +34,7 @@ public class Juego
             if((opcion_JUGADOR1.equals("piedra")) && (opcion_JUGADOR2.equals("papel")))
             {
                 System.out.println("Jugador 2 GANA");
-                EXITOS_jugador2 = p2.éxitos++;
+                EXITOS_jugador2 = ++p2.éxitos;
                 
             }
             else if((opcion_JUGADOR1.equals("papel")) && (opcion_JUGADOR2.equals("piedra")))
