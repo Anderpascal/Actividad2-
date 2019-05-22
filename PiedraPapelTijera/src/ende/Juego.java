@@ -12,15 +12,15 @@ public class Juego
     public static void main(String args[])
     {
     	boolean fin_de_juego = false;  
-        Integer Rondasjugadas = 0; 
-        Integer EmPaTeS = 0;
+        int Rondasjugadas = 0; 
+        int EmPaTeS = 0;
         String opcion_JUGADOR1, opcion_JUGADOR2;
         
-    	Jugador p1=new Jugador();
-        Jugador p2=new Jugador();
+    	Jugador p1 = new Jugador();
+        Jugador p2 = new Jugador();
           
-        Integer EXITOS_jugador1 = p1.éxitos;
-        Integer EXITOS_jugador2 = p2.éxitos;
+        int EXITOS_jugador1 = p1.getÉxitos();
+        int EXITOS_jugador2 = p2.getÉxitos();
     	
     	do
         {
@@ -34,7 +34,7 @@ public class Juego
             if((opcion_JUGADOR1.equals("piedra")) && (opcion_JUGADOR2.equals("papel")))
             {
                 System.out.println("Jugador 2 GANA");
-                EXITOS_jugador2 = ++p2.éxitos;
+                EXITOS_jugador2 = p2.éxitos++;
                 
             }
             else if((opcion_JUGADOR1.equals("papel")) && (opcion_JUGADOR2.equals("piedra")))
@@ -79,39 +79,4 @@ public class Juego
         
     }
 }
-/**
- *
- */
-class Jugador{
-   
-    /**
-     * Escoge piedra, papel o tijera al azar
-     */
-    public String opcion_al_azar()
-    {
-        String opcion = "";
-        Integer c = (int)(Math.random()*3);
-        switch(c){
-            case 0:
-            	opcion = ("piedra");
-                break;
-            case 1:
-            	opcion = ("papel");
-                break;
-            case 2:
-            	opcion = ("tijeras");
-        }
-        return opcion;
-    }
-    public void setÉxitos() 
-    {
-        éxitos++;
-    }
-    public int getÉxitos() 
-    {
-        return(éxitos);
-    }
-    
-    int éxitos;      // número de partidas ganadas
-    int winTotal;
-}
+
