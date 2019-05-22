@@ -19,6 +19,9 @@ class Jugador{
                 break;
             case 2:
             	opcion = ("tijeras");
+            	break;
+            default:
+            	opcion = ("Incorrecto");
         }
         return opcion;
     }
